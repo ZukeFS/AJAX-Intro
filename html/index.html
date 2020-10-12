@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX Intro</title>
+    <link rel="stylesheet" href="../bootstrap-3.3.7-dist/css/bootstrap.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div id="loaddata"><h2>this is going to be changed...</h2></div>
+        <button class="btn btn-success" id="btnclick">Click on it.</button>
+    </div>
+
+    <script type="text/javascript"> //we have used jQuery here
+        $(document).ready(function(){
+            $('#btnclick').click(function(){
+                $('#loaddata').load('load.html', function(){
+                    alert('AJAX call successfull :D');
+                })
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+Q1. What is AJAX?
+--> Asynchronous Javascript and XML.
+    It is not a programming language.
+    It uses a combination of:
+       i.  A browser built-in XMLHttpRequest object (to request data from a web server).
+       ii. Javascript and HTML DOM (to display or use the data).
+
+Q2. What are the features of AJAX?
+--> AJAX allows web pages to be updated asynchronously by exchanging data with a web server
+    behind the scenes.
+    This means that it is possible to update parts of a web page, without reloading the whole
+    page.
+
+load() method: The load() method loads data from a server and puts the returned data into the
+               selected element.
+  $(selector).load(URL, data, callback);
+
+Q3. How AJAX works?
+--> The XMLHttpRequest object is used to exchange data with a server without refreshing any other
+    content of the webpage.
+    
+    To send a request to a server, we use the open() and send() methods of the XMLHttpRequest 
+    object:
+      i. open(method, url, async) -- Specifies the type of request
+            method - the type of request: GET or POST
+            url    - the server (file) location
+            async  - true (asynchronous) or false (synchronous)
+
+     ii. send() -- sends the request to the server (used for GET) 
+
+    AJAX - Server Response
+    The readyState property holds the status of the XMLHttpRequest.
+
+    The onreadyStateChange property defines a function to be executed when the readyState changes.
+
+    The status property and the statusText property holds the status of the XMLHttpRequest object.
+
+    0: request not initialized
+    1: server connection established
+    2: request received
+    3: processing request
+    4: request finished and response is ready
+
+Q4. How to use GET and POST methods using AJAX?
+--> jQuery $.get() Method:
+    $.get() method -- requests data from the server with an HTTP GET request.
+    
+    Syntax:
+    $.get(URL, callback);
+    The required URL parameter specifies the URL we wish to request.
+
+    The optional callback parameter is the name of a function to be executed if the request succeeds.
+
+
+    jQuery $.post() Method:
+    The $.post() method -- requests data from the server using an HTTP POST request.
+
+    Syntax:
+    $.post(URL, data, callback);
+    The required URL parameter specifies the URL we wish to request.
+
+    The optional data parameter specifies some data to send along with the request.
+
+    The optional callback parameter is thr name of a function to be executed if the request succeeds.
+
+
+    Difference between GET and POST methods:
+    GET method can be used for project purpose to fetch data faster, but the privacy is not hidden.
+    POST method can be used if we want our project to be encrypted and secure.
